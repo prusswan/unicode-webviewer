@@ -1,2 +1,21 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>Listing characters</h1>
+
+<%= paginate @chars %>
+
+<table id="characters">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+
+  <tbody class="characters">
+    <%= render partial: 'char', collection: @chars, as: :char %>
+  </tbody>
+</table>
+
+<br>
+
+
